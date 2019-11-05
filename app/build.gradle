@@ -34,4 +34,6 @@ dependencies {
 
     //搜索的依赖
     implementation 'com.carson_ho:SearchLayout:1.0.1'
+    //Volley
+    compile 'com.mcxiaoke.volley:library:1.0.19'
 }

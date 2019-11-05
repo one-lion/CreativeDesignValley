@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomePagerActivity.HomePagerSearchActivity">
+    tools:context=".Module.HomePage.SearchActivity">
 
     <com.lwz.ctb.creativedesignvalley.Widget.SearchView
         android:id="@+id/sv_homepager_search"

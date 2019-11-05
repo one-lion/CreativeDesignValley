@@ -1,4 +1,4 @@
-package com.lwz.ctb.creativedesignvalley.HomePagerActivity;
+package com.lwz.ctb.creativedesignvalley.Module.HomePage;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,7 +14,7 @@ import scut.carson_ho.searchview.ICallBack;
 import scut.carson_ho.searchview.bCallBack;
 //import scut.carson_ho.searchview.bCallBack;
 
-public class HomePagerSearchActivity extends AppCompatActivity {
+public class SearchActivity extends AppCompatActivity {
 
     //初始化搜索框变量
     private SearchView homePagerSearchView;

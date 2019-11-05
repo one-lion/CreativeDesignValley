@@ -1,16 +1,22 @@
 package com.lwz.ctb.creativedesignvalley;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.WindowManager;
 
 import com.lwz.ctb.creativedesignvalley.Adapter.MyMainViewPagerAdapter;
 import com.lwz.ctb.creativedesignvalley.Fragment.HomeFragment;
 import com.lwz.ctb.creativedesignvalley.Fragment.InformationFragment;
 import com.lwz.ctb.creativedesignvalley.Fragment.MyFragment;
+import com.lwz.ctb.creativedesignvalley.Module.Login.LoginActivity;
+import com.lwz.ctb.creativedesignvalley.R;
 
 import java.util.ArrayList;
 
@@ -33,7 +39,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        SharedPreferences sp = getSharedPreferences("loginInfo", MODE_PRIVATE);
+        boolean hadLogin = sp.getBoolean("hadLogin",false);
+        if(!hadLogin){
+            Log.i("MainActivity",hadLogin + "");
+            Intent intent = new Intent(MainActivity.this,LoginActivity.class);
+            startActivityForResult(intent, 1);
+        }
         init();
+    }
+    @Override
+    protected void onResume(){
+        super.onResume();
+
+
     }
 
     @SuppressLint("WrongViewCast")
