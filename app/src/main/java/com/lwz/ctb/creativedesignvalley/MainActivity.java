@@ -17,12 +17,13 @@ import com.lwz.ctb.creativedesignvalley.Fragment.InformationFragment;
 import com.lwz.ctb.creativedesignvalley.Fragment.MyFragment;
 import com.lwz.ctb.creativedesignvalley.Module.Login.LoginActivity;
 import com.lwz.ctb.creativedesignvalley.R;
+import com.lwz.ctb.creativedesignvalley.Widget.ControlScrollViewPager;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ViewPager mainViewPagr;     //主页的ViewPager;
+    private ControlScrollViewPager mainViewPagr;     //主页的ViewPager;
     private TabLayout mainTabLayout;    //主页的导航栏
 
     private ArrayList<String> tabNameList;  //导航栏标题数据
