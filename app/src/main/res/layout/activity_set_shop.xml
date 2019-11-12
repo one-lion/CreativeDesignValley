@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Module.MyCenter.Activity.SetShopActivity">
+
+    <TextView
+        android:id="@+id/tv_shop_titile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="店铺设置"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="店铺名："
+            android:layout_marginLeft="30dp"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/et_shop_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="店铺简介："
+            android:layout_marginLeft="30dp"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/et_shop_introduction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="店铺封面："
+        android:layout_marginLeft="30dp"
+        android:textSize="20sp"/>
+
+    <ImageView
+        android:id="@+id/iv_shop_photo"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:background="@color/lightBlue"
+        android:layout_gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="入驻项目："
+            android:layout_marginLeft="30dp"
+            android:textSize="20sp"/>
+
+        <Spinner
+            android:id="@+id/sp_choice_project"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dialog"
+            android:popupBackground="@color/lightBlue"
+            android:layout_marginRight="30dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="价格区间（元）："
+            android:layout_marginLeft="30dp"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/et_price_down"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:hint="上限"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="~"
+            android:layout_marginRight="10dp"/>
+
+        <EditText
+            android:id="@+id/et_price_up"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:hint="下限"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/btn_previous_one"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="上一步："
+            android:layout_marginLeft="50dp"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/btn_shop_sure"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="确定"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp"
+            android:layout_marginRight="50dp"
+            />
+
+    </LinearLayout>
+</LinearLayout>

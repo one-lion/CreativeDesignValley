@@ -6,9 +6,43 @@
     tools:context=".Fragment.MyFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="我是我的碎片" />
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_user_head_photo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/fang_test"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_user_nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请编辑昵称"
+            android:layout_centerVertical="true"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/iv_user_head_photo"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_set_shop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开店"
+            android:textSize="18sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"/>
+
+
+
+    </RelativeLayout>
+
 
 </FrameLayout>
