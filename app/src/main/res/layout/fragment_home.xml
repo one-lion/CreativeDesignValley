@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -20,11 +22,25 @@
             android:scaleType="centerInside"
             android:src="@drawable/home_search_box" />
 
+        <!-- 广告banner -->
+        <com.hacknife.carouselbanner.CoolCarouselBanner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/iv_home_search"
+            app:showIndicator="true"
+            app:autoPlaying="true"
+            app:indicatorGravity="left"
+            app:indicatorSelectedSrc="#000000"
+            app:indicatorUnselectedSrc="#000000"
+            app:orientation="horizontal"
+            app:speedPerPixelMillisecond="0.8" />
+
         <!--店铺展示界面布局-->
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/iv_home_search"
+            android:layout_below="@id/banner"
             android:layout_marginTop="10dp">
 
             <LinearLayout
@@ -66,16 +82,14 @@
                         android:layout_centerVertical="true"
                         android:src="@drawable/homepager_more"
                         android:layout_alignParentRight="true"
-                        android:layout_marginRight="10dp"
-                        />
-
+                        android:layout_marginRight="10dp" />
                 </RelativeLayout>
 
-<!--                平面设计板块-->
+                <!-- 平面设计板块-->
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recycler_view"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent" />
 
                 <!--登录按钮-->
                 <Button
@@ -87,7 +101,6 @@
             </LinearLayout>
 
         </ScrollView>
-
 
     </RelativeLayout>
 
