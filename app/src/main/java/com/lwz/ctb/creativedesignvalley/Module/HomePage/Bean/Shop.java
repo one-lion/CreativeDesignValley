@@ -2,48 +2,57 @@ package com.lwz.ctb.creativedesignvalley.Module.HomePage.Bean;
 
 import android.graphics.Bitmap;
 
+import java.io.Serializable;
+
 /**
  * Created by 林伟洲-软件工程 on 2019/11/6.
  */
 
-public class Shop {
-    private String shopName;
-    private String price;
-    private Bitmap coverPicture;
+//店铺信息的序列化信息
+public class Shop implements Serializable {
+    private String shopPhotoPath;   //图片路径
+    private String shopName;        //店铺名字
+    private String shopIntroduction;    //店铺简介
+    private String shopPrice;   //店铺价格
+    private String shopTemperature; //店铺热度
 
-    public Shop(String shopName, String price) {
-        this.shopName = shopName;
-        this.price = price;
+    public String getShopPhotoPath() {
+        return shopPhotoPath;
     }
 
-    public Shop(String shopName, String price, Bitmap coverPicture) {
-        this.shopName = shopName;
-        this.price = price;
-        this.coverPicture = coverPicture;
+    public void setShopPhotoPath(String shopPhotoPath) {
+        this.shopPhotoPath = shopPhotoPath;
+    }
+
+    public String getShopName() {
+        return shopName;
     }
 
     public void setShopName(String shopName) {
         this.shopName = shopName;
     }
 
-    public void setPrice(String price) {
-        this.price = price;
+    public String getShopIntroduction() {
+        return shopIntroduction;
     }
 
-    public void setCoverPicture(Bitmap coverPicture) {
-        this.coverPicture = coverPicture;
+    public void setShopIntroduction(String shopIntroduction) {
+        this.shopIntroduction = shopIntroduction;
     }
 
-    public String getShopName() {
-
-        return shopName;
+    public String getShopPrice() {
+        return shopPrice;
     }
 
-    public String getPrice() {
-        return price;
+    public void setShopPrice(String shopPrice) {
+        this.shopPrice = shopPrice;
     }
 
-    public Bitmap getCoverPicture() {
-        return coverPicture;
+    public String getShopTemperature() {
+        return shopTemperature;
+    }
+
+    public void setShopTemperature(String shopTemperature) {
+        this.shopTemperature = shopTemperature;
     }
 }

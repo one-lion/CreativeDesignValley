@@ -19,6 +19,12 @@ allprojects {
     repositories {
         google()
         jcenter()
+
+        flatDir {       //吸顶效果
+            dirs 'libs'
+        }
+        maven { url "http://jcenter.bintray.com"}
+        maven { url 'https://jitpack.io' }
     }
 }
 
